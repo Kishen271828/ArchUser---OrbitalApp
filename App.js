@@ -1,5 +1,9 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
+import {useState} from 'react';
+import AppLoading from 'expo-app-loading';
+import * as Font from 'expo-font';
+
 import Card from './shared/card';
 import EntryCard from './shared/entryCard';
 import MiniCard from './shared/miniCard';
@@ -14,11 +18,25 @@ const getFonts = () => {
 };
 
 export default function App() {
-  return (
-	<EntryCard>
-		<Text>Open up App.js to start working on your app!</Text>
-	</EntryCard>
-  );
+  const [fontsLoaded, setfontsLoaded] = useState(false);
+  if (fontsLoaded) {
+    return (
+	  <View> 
+	    <Text>work plz </Text>
+	    <View>
+	    <Text style={styles.text}> Work </Text> 
+	    </View>
+	  </View>
+    );
+  } else {
+    return (
+      <AppLoading
+        startAsync={getFonts}
+        onFinish={() => setfontsLoaded(true)}
+        onError={(err) => console.log(err)}
+      />
+    );
+  }
 }
 
 const styles = StyleSheet.create({
@@ -27,5 +45,9 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
+    fontFamily: 'mochiyBold'
   },
+	text: {
+		fontFamily: 'mochiyBold'
+	}
 });
