@@ -8,6 +8,7 @@ import Card from './shared/card';
 import EntryCard from './shared/entryCard';
 import MiniCard from './shared/miniCard';
 import Button from './shared/button';
+import MyTabs from './components/navigator/tabs';
 
 const getFonts = () => {
   return Font.loadAsync({
@@ -21,12 +22,7 @@ export default function App() {
   const [fontsLoaded, setfontsLoaded] = useState(false);
   if (fontsLoaded) {
     return (
-	  <View> 
-	    <Text>work plz </Text>
-	    <View>
-	    <Text style={styles.text}> Work </Text> 
-	    </View>
-	  </View>
+	    <MyTabs/>
     );
   } else {
     return (
