@@ -1,13 +1,15 @@
-import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import { NavigationContainer } from "@react-navigation/native";
 import * as React from "react";
+import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+
+import { NavigationContainer } from "@react-navigation/native";
 import { Text, View, Image } from "react-native";
+
 import JournalHome from "../journal/journalHome";
-import Habits from "../habit/tracker";
+//import Habits from "../habit/tracker";
 import TaskList from "../taskList/taskList";
-//import Timer from "../timerComponents/timer.js";
 
 const Tab = createBottomTabNavigator();
+
 
 export function MyTabs() {
   return (
@@ -63,28 +65,6 @@ export function MyTabs() {
           }}
         />
         <Tab.Screen
-          name="Habits"
-          component={Habits}
-          options={{
-            tabBarIcon: ({ focused }) => (
-              <View>
-                <Image
-                  resizeMode="contain"
-                  style={{ tintColor: focused ? "#ff0000" : "#8effec" }}
-                />
-                <Text
-                  style={{
-                    fontSize: 15,
-                    color: focused ? "#ff0000" : "#8effec",
-                  }}
-                >
-                  Tracker
-                </Text>
-              </View>
-            ),
-          }}
-        />
-        <Tab.Screen
           name="TaskList"
           component={TaskList}
           options={{
@@ -107,32 +87,8 @@ export function MyTabs() {
           }}
         />
 
-/*
-        <Tab.Screen
-          name="Timer"
-          component={Timer}
-          options={{
-            tabBarIcon: ({ focused }) => (
-              <View>
-                <Image
-                  resizeMode="contain"
-                  style={{ tintColor: focused ? "#ff0000" : "#8effec" }}
-                />
-                <Text
-                  style={{
-                    fontSize: 15,
-                    color: focused ? "#ff0000" : "#8effec",
-                  }}
-                >
-                  Timer
-                </Text>
-              </View>
-            ),
-          }}
-        />
-*/
-
       </Tab.Navigator>
     </NavigationContainer>
   );
 }
+

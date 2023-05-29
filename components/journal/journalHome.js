@@ -13,12 +13,8 @@ import { useState, useEffect } from "react";
 import uuid from "react-native-uuid";
 import { MaterialIcons } from "@expo/vector-icons";
 import AsyncStorage from "@react-native-async-storage/async-storage";
-import { TextInput } from "react-native-gesture-handler";
-import Animated, {
-  SlideInRight,
-  SlideOutRight,
-  Layout,
-} from "react-native-reanimated";
+//import { TextInput } from "react-native-gesture-handler";
+import { TextInput } from "react-native";
 //
 import Card from "../../shared/card";
 import EntryCard from "../../shared/entryCard";
@@ -69,12 +65,6 @@ export default function JournalHome() {
   };
   const renderItemFunction = ({ item, index }) => {
     return (
-      <Animated.View
-        entering={SlideInRight.delay(index * 300).duration(1000)}
-        exiting={SlideOutRight}
-        layout={Layout.springify()}
-        key={item.key}
-      >
         <TouchableOpacity onPress={() => onPressFunction(item)}>
           <Card>
             <View style={styles.dateTextView}>
@@ -88,7 +78,6 @@ export default function JournalHome() {
             </View>
           </Card>
         </TouchableOpacity>
-      </Animated.View>
     );
   };
 
