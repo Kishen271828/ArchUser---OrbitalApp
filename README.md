@@ -1,9 +1,12 @@
 Proposed Level of Achievement: 
 Gemini
+
 Motivation:
 We want to create a fitness tracking app that helps users monitor their daily exercise routines and stay motivated to achieve their fitness goals. 
+
 Aim: 
-Our project aims to create a simple fitness tracking app. The app will allow users to input and track their daily exercise routines and display progress towards their fitness goals. 
+Our project aims to create a simple fitness tracking app. The app will allow users to input and track their daily exercise routines and display progress towards their fitness goals.
+
 User Stories: 
 1. As a fitness enthusiast, I want to be able to track my workouts, set goals, and monitor my progress. 2. As a beginner, I want to be able to get guidance on how to perform exercises correctly and safely. 3. As a busy professional, I want to be able to track my fitness activities on the go and get reminders to stay on track. 
 
@@ -35,6 +38,7 @@ Things to be completed by mid-July:
 Key Features Developed:
 Journal
 TaskList
+
 SE practices
 Reusable components
 Iterative development
@@ -44,8 +48,8 @@ Version control using Github
 Technical proof of concept:
 
 User Instructions:
-Download Expo Go on your phone
-Open the app and enter the link “exp://exp.host/@kishen271828/milestone1?release-channel=default” under “Enter URL manually”
-Click the “Connect” button
+1.Download Expo Go on your phone
+2.Open the app and enter the link “exp://exp.host/@kishen271828/milestone1?release-channel=default” under “Enter URL manually”
+3.Click the “Connect” button
 
 orbital app
