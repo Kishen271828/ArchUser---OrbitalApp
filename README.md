@@ -16,9 +16,11 @@ Scope of Project:
 Our Fitness Tracking App is a comprehensive mobile application designed to empower users in their fitness journey by providing a robust platform for monitoring, tracking, and improving their fitness activities and progress. The app offers a range of features, including exercise tracking, meal tracking, goal setting, progress visualization, and personalized recommendations. By leveraging the power of technology, the app aims to enhance users' fitness experiences, promote healthy habits, and support them in achieving their fitness goals. With its user-friendly interface, insightful analytics, and seamless integration with various fitness devices and platforms, the Fitness Tracking App aims to be a trusted companion for individuals seeking to optimize their fitness routines, maintain accountability, and lead healthier lifestyles.
 
 Features:
-1)Personalized fitness tracking: Users can set personalized fitness goals and track their progress towards achieving them. 
-2)Exercise tracking: Users can track the exercises they perform and its details each exercise session. 
-3)Diet tracker: Users can log their meals and track their calorie intake to ensure that they are meeting their nutritional goals. 
+1) Task List: This feature empowers users to stay organized and focused on their fitness goals by providing a comprehensive list where they can create, manage, and track their workout tasks, ensuring a structured and efficient fitness routine.
+2) Journal:  This feature serves as a personal fitness diary, allowing users to document their fitness progress, achievements, and challenges by recording entries with specific dates and detailed descriptions, enabling self-reflection and providing a valuable tool for motivation and tracking their fitness journey.
+3) Habit Tracker
+4) Exercise Timer
+ 
 
 Tech Stack: 
 1. React Native 
