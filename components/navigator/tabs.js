@@ -5,7 +5,7 @@ import { NavigationContainer } from "@react-navigation/native";
 import { Text, View, Image } from "react-native";
 
 import JournalHome from "../journal/journalHome";
-//import Habits from "../habit/tracker";
+import Habits from "../habit/tracker";
 import TaskList from "../taskList/taskList";
 
 const Tab = createBottomTabNavigator();
