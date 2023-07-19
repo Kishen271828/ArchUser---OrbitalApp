@@ -27,9 +27,7 @@ const getFonts = () => {
   });
 };
 
-	    //<View> 
-	    //<Text> fuck sake</Text> 
-	    //</View>
+	    
 export default function App() {
   const [fontsLoaded, setfontsLoaded] = useState(false);
   if (fontsLoaded) {
