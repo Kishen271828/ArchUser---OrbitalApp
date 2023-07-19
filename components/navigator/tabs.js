@@ -86,6 +86,28 @@ export function MyTabs() {
             ),
           }}
         />
+        <Tab.Screen
+          name="HabitTracker"
+          component={Habits}
+          options={{
+            tabBarIcon: ({ focused }) => (
+              <View>
+                <Image
+                  resizeMode="contain"
+                  style={{ tintColor: focused ? "#ff0000" : "#8effec" }}
+                />
+                <Text
+                  style={{
+                    fontSize: 15,
+                    color: focused ? "#ff0000" : "#8effec",
+                  }}
+                >
+                  HabitTracker
+                </Text>
+              </View>
+            ),
+          }}
+        />
 
       </Tab.Navigator>
     </NavigationContainer>
