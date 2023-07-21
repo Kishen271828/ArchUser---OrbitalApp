@@ -68,14 +68,15 @@ export default function TaskList() {
     });
   };
   const markTaskComplete = (key) => {
-    const newTasks = tasks.map((item) => {
-      if (item.key == key) {
-        return { ...item, completed: true };
-      }
-      return item;
-    });
-    setTasks(newTasks);
-  };
+  const newTasks = tasks.map((item) => {
+    if (item.key === key) {
+      return { ...item, completed: !item.completed }; // Toggle the completed status
+    }
+    return item;
+  });
+  setTasks(newTasks);
+};
+
 
   const renderItemFunction = ({ item, index }) => {
     return (
