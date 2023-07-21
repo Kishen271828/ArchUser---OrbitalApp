@@ -31,7 +31,7 @@ export default function AddEntry({ addEntry }) {
               value={props.values.entry}
               style={styles.textInput}
             />
-            <FlatButton text="sumbit" onPress={props.handleSubmit} />
+            <FlatButton text="submit" onPress={props.handleSubmit} />
           </View>
         )}
       </Formik>
