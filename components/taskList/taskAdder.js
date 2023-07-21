@@ -22,7 +22,7 @@ export default function AddTask({ addTask }) {
               value={props.values.task}
               style={styles.textInput}
             />
-            <FlatButton text="sumbit" onPress={props.handleSubmit} />
+            <FlatButton text="submit" onPress={props.handleSubmit} />
           </View>
         )}
       </Formik>
