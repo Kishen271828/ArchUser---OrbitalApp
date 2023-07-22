@@ -77,6 +77,7 @@ export function MyTabs() {
                 <Text
                   style={{
                     fontSize: 15,
+                    right: 15,
                     color: focused ? "#ff0000" : "#8effec",
                   }}
                 >
@@ -99,6 +100,7 @@ export function MyTabs() {
                 <Text
                   style={{
                     fontSize: 15,
+                    right: 15,
                     color: focused ? "#ff0000" : "#8effec",
                   }}
                 >
