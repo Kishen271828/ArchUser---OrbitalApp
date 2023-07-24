@@ -5,12 +5,22 @@ import FlatButton from "../../shared/button.js";
 //it always says date 69 at the start because props.values.entry and props.values.date was props.value.title/body
 
 export default function AddEntry({ addEntry }) {
+  // define the regex for DD-MM-YYYY format
+  const regex = /^(0[1-9]|[12][0-9]|3[01])[- /.](0[1-9]|1[012])[- /.](19|20)\d\d$/;
+
   return (
     <View>
       <Formik
         initialValues={{ date: "", entry: "" }}
         onSubmit={(values) => {
-          addEntry(values);
+          // check if the date input is valid
+          if (regex.test(values.date)) {
+            // call the addEntry function
+            addEntry(values);
+          } else {
+            // show an alert
+            alert("Invalid date format. Please enter DD-MM-YYYY.");
+          }
         }}
       >
         {(props) => (
@@ -21,6 +31,13 @@ export default function AddEntry({ addEntry }) {
               onChangeText={props.handleChange("date")}
               value={props.values.date}
               style={styles.textInput}
+              // use onBlur event to validate the input
+              onBlur={() => {
+                // if the input does not match the regex, show an alert
+                if (!regex.test(props.values.date)) {
+                  alert("Invalid date format. Please enter DD-MM-YYYY.");
+                }
+              }}
             />
 
             <TextInput
