@@ -6,6 +6,9 @@ import FlatButton from "../../shared/button.js";
 //initial values MUST be empty
 
 export default function DayAdder({ addDay }) {
+  // define the regex for DD-MM-YYYY format
+  const regex = /^(0[1-9]|[12][0-9]|3[01])[- /.](0[1-9]|1[012])[- /.](19|20)\d\d$/;
+
   return (
     <View>
       <Formik
@@ -18,7 +21,14 @@ export default function DayAdder({ addDay }) {
           habit5: "",
         }}
         onSubmit={(values) => {
-          addDay(values);
+          // check if the date input is valid
+          if (regex.test(values.date)) {
+            // call the addDay function
+            addDay(values);
+          } else {
+            // show an alert
+            alert("Invalid date format. Please enter DD-MM-YYYY.");
+          }
         }}
       >
         {(props) => (
@@ -29,6 +39,13 @@ export default function DayAdder({ addDay }) {
               placeholder="  date"
               onChangeText={props.handleChange("date")}
               value={props.values.date}
+              // use onBlur event to validate the input
+              onBlur={() => {
+                // if the input does not match the regex, show an alert
+                if (!regex.test(props.values.date)) {
+                  alert("Invalid date format. Please enter DD-MM-YYYY.");
+                }
+              }}
             />
             <TextInput
               style={styles.textInput}
