@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "milestone1",
-    "slug": "milestone1",
+    "name": "my-app",
+    "slug": "my-app",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -25,20 +25,6 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    },
-    "plugins": [
-      "expo-font"
-    ],
-    "extra": {
-      "eas": {
-        "projectId": "7951ebc0-491a-429b-9199-ae5d85a12ba0"
-      }
-    },
-    "runtimeVersion": {
-      "policy": "appVersion"
-    },
-    "updates": {
-      "url": "https://u.expo.dev/7951ebc0-491a-429b-9199-ae5d85a12ba0"
     }
   }
 }
